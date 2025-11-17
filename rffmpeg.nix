@@ -6,14 +6,14 @@
 
  python3Packages.buildPythonApplication {
   pname = "rffmpeg";
-  version = "c1d3ab5";
+  version = "e7f3b63";
   pyproject = false;
 
   src = fetchFromGitHub {
     owner = "Robotboy26";
     repo = "rffmpeg";
-    rev = "c1d3ab5";
-    sha256 = "sha256-3aY/c9L7/hHmcGO90l6nMzssUNwKlbbYUs3YdXowIiE=";
+    rev = "e7f3b63";
+    sha256 = "sha256-v/8xMdqlk/krmBjFGzJuhGhVBwZlCSrEUbzHltQ+1Q0=";
   };
 
   buildInputs = [ python3Packages.click python3Packages.yamllint ];
