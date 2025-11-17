@@ -180,7 +180,7 @@ def load_config():
     # Parse the keys from the state group
     config["state_dir"] = config_directories.get("state", "/var/lib/rffmpeg")
     config["persist_dir"] = config_directories.get("persist", "/run/shm")
-    config["dir_owner"] = config_directories.get("owner", "jellyfin")
+    config["dir_owner"] = "root"
     config["dir_group"] = config_directories.get("group", "sudo")
 
     # Parse the keys from the remote group

@@ -26,8 +26,8 @@
     runHook preInstall
     mkdir -p $out/bin
     cp dist/rffmpeg $out/bin
-    ln -s $out/bin/rffmpeg $out/bin/ffmpeg
-    ln -s $out/bin/rffmpeg $out/bin/ffprobe
+    ln -s ${pkgs.ffmpeg}/bin/ffmpeg $out/bin/ffmpeg
+    ln -s ${pkgs.ffmpeg}/bin/ffprobe $out/bin/ffprobe
     runHook postInstall
   '';
 

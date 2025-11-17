@@ -19,6 +19,13 @@ pkgs.mkShellNoCC { # Make a shell without a c compiler (Use mkShell to get a c c
       pkgs.ffmpeg
       rffmpeg
   ];
+
+  preShellHook = ''
+      sudo mkdir -p /var/lib/rffmpeg
+      sudo chown -R robot /var/lib/rffmpeg
+      sudo chmod 777 -R /var/lib/rffmpeg
+  '';
+
   shellHook = ''
       echo ${pkgs.cowsay}
       cowsay "Welcome to the rffmpeg build env"
