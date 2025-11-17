@@ -13,8 +13,6 @@ in
 
 pkgs.mkShellNoCC { # Make a shell without a c compiler (Use mkShell to get a c compiler)
   packages = [ # Package to include in the shell
-      pkgs.python313Packages.click
-      pkgs.python313Packages.yamllint
       pkgs.cowsay
       pkgs.ffmpeg
       rffmpeg
